@@ -17,7 +17,6 @@ poetry.lock
 # Data
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*.csv
 data/processed/*.parquet
 !data/processed/.gitkeep
 
