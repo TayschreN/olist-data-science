@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+env/
+poetry.lock
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_metadata/
+
+# Models
+*.pkl
+*.joblib
+!models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports
+reports/figures/*
+!reports/figures/.gitkeep
+
+# MLflow
+mlruns/

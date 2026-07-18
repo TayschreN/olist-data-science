@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+    command: streamlit run app/streamlit_app.py --server.port=8501 --server.address=0.0.0.0
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
